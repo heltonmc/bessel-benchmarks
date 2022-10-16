@@ -20,6 +20,10 @@ The benchmark measures the total time to sum an array of N random values where w
 | bessely(10, x) | 92.3 ns                   |      122.0 ns               | 54.0 ns                    |  59.1 ns              |
 | besselj(100, x) | 172.1 ns                 |      527.0 ns               | 220.1 ns                   |  445.0 ns             |
 | bessely(100, x) | 229.7 ns                 |      304.0 ns               | 158.2 ns                   |  254.0 ns              |
+| besselk0      | 13.4 ns                    |      -                      | 29.4                    |  -              |
+| besselk1      | 12.7 ns                    |      -                      | 28.6                    |  -              |
+| besseli0      | 14.9 ns                    |      -                      | 21.4                    |  -              |
+| besseli1      | 16.2 ns                    |      -                      | 10.1                    |  -              |
 
 
 # Sorted array
@@ -33,7 +37,11 @@ The benchmark measures the total time to sum an array of N random values where w
 | besselj(10, x)    | 82.0 ns                    | 80.5 ns                    | 
 | bessely(10, x)    | 62.48 ns                   | 38.8 ns                    |
 | besselj(100, x)   | 159.6 ns                   | 183.8 ns                   | 
-| bessely(100, x)   | 215.3 ns                   | 146.3 ns                   | 
+| bessely(100, x)   | 215.3 ns                   | 146.3 ns                   |
+| besselk0          | 13.6 ns                    | 29.4                    |
+| besselk1          | 13.9 ns                    | 28.6                    |
+| besseli0          | 15.6 ns                    | 21.0                    |
+| besseli1          | 17.3 ns                    | 9.9                    |
 
 
 # CPU Information
