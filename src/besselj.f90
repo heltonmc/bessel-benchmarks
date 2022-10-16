@@ -18,7 +18,7 @@ program bess
     call cpu_time(endT)
 
     execTime = (endT - startT)
-    print '("Time = ",f6.3," seconds.")', execTime  / n
+    print '("Time = ",g0.3," nanoseconds per value.")',execTime/n * 1.0d9
+    print '("Time = ",g0.3," total seconds.")',execTime
     print *, a
-    print *, execTime / n
  end program bess
