@@ -6,12 +6,12 @@ This is very experimental right now. Please don't take this as any indication th
 
 # Unsorted array
 
-|               | Bessels.jl (v1.8.2) CPU #1 | Bessels.jl (v1.8.2) CPU #2 |
-| ------------- | :---:                      | :---:                      |
-| besselj0      | 26.0 ns                    | 29.9 ns                    |
-| besselj1      | 26.7 ns                    | 29.9 ns                    |
-| bessely0      | 28.1 ns                    | 30.9 ns                    |
-| bessely1      | 27.6 ns                    | 30.3 ns                    |
+|               | Bessels.jl (v1.8.2) CPU #1 |      gfortran -O3 (CPU #1)     | Bessels.jl (v1.8.2) CPU #2 |     gfortran -O3 (CPU #1) |
+| ------------- | :---:                      |   :---:                | :---:                      |   :---: |
+| besselj0      | 26.0 ns                    |      50.5                  | 29.9 ns                |  37.3  |
+| besselj1      | 26.7 ns                    |      50.5                  | 29.9 ns                |   37.2   |
+| bessely0      | 28.1 ns                    |     50.7            | 30.9 ns                 |        29.1        |
+| bessely1      | 27.6 ns                    |      50.6           | 30.3 ns                    |       29.2     |
 
 # Sorted array
 
