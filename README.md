@@ -6,21 +6,30 @@ This is very experimental right now. Please don't take this as any indication th
 
 # Unsorted array
 
-|               | Bessels.jl (v1.8.2) CPU #1 |      gfortran -O3 (CPU #1)     | Bessels.jl (v1.8.2) CPU #2 |     gfortran -O3 (CPU #1) |
-| ------------- | :---:                      |   :---:                | :---:                      |   :---: |
-| besselj0      | 26.0 ns                    |      50.5                  | 29.9 ns                |  37.3  |
-| besselj1      | 26.7 ns                    |      50.5                  | 29.9 ns                |   37.2   |
-| bessely0      | 28.1 ns                    |     50.7            | 30.9 ns                 |        29.1        |
-| bessely1      | 27.6 ns                    |      50.6           | 30.3 ns                    |       29.2     |
+|               | Bessels.jl (v1.8.2) CPU #1 |      gfortran -O3 (CPU #1)  | Bessels.jl (v1.8.2) CPU #2 | gfortran -O3 (CPU #2) |
+| ------------- | :---:                      |   :---:                     | :---:                      |   :---:               |
+| besselj0      | 26.0 ns                    |      50.5                   | 29.9 ns                    |  37.3                 |
+| besselj1      | 26.7 ns                    |      50.5                   | 29.9 ns                    |   37.2                |
+| bessely0      | 28.1 ns                    |      50.7                   | 30.9 ns                    |        29.1           |
+| bessely1      | 27.6 ns                    |      50.6                   | 30.3 ns                    |       29.2            |
+| besselj(10, x) | 97.8 ns                   |      124.0                  | 103.6                      |       70.2            |
+| bessely(10, x) | 92.3 ns                   |      122.0                  | 54.0                       |       59.1            |
+| besselj(100, x) | 172.1 ns                  |      527.0                  | 220.1                      |       445.0           |
+| bessely(100, x) | 229.7 ns                  |      304.0                  | 158.2                      |       254.0           |
+
 
 # Sorted array
 
-|               | Bessels.jl (v1.8.2) CPU #1 | Bessels.jl (v1.8.2) CPU #2 |
-| ------------- | :---:                      | :---:                      |
-| besselj0      | 16.4 ns                    | 12.2 ns                    |
-| besselj1      | 17.2 ns                    | 12.5 ns                    |
-| bessely0      | 17.8 ns                    | 11.2 ns                    |
-| bessely1      | 17.4 ns                    | 11.4 ns                    |
+|                   | Bessels.jl (v1.8.2) CPU #1 | Bessels.jl (v1.8.2) CPU #2 |
+| -------------     | :---:                      | :---:                      |
+| besselj0          | 16.4 ns                    | 12.2 ns                    |
+| besselj1          | 17.2 ns                    | 12.5 ns                    |
+| bessely0          | 17.8 ns                    | 11.2 ns                    |
+| bessely1          | 17.4 ns                    | 11.4 ns                    |
+| besselj(10, x)    | 82.0 ns                    | 80.5                       | 
+| bessely(10, x)    | 62.48 ns                   | 38.8                       |
+| besselj(100, x)   | 159.6 ns                   | 183.8                      | 
+| bessely(100, x)   | 215.3 ns                   | 146.3                      | 
 
 
 # CPU Information
