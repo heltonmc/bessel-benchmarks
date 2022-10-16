@@ -1,5 +1,5 @@
 ! This program was helped by many in the Fortran discourse community https://fortran-lang.discourse.group/t/comparing-fortran-and-julias-bessel-function-performance/4541
-! Particularly acknowledgement to members urbanjost, Beliavsky, rgba who helped in compiling my first Fortran program
+! Particular acknowledgement to members urbanjost, Beliavsky, rgba who helped in compiling my first Fortran program and constructing this benchmark.
 program bess
     integer, parameter :: p = selected_real_kind(15, 307)
     integer, parameter :: n = 50000000
