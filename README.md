@@ -30,10 +30,10 @@ The benchmark measures the total time to sum an array of N random values where w
 | besselj1          | 17.2 ns                    | 12.5 ns                    |
 | bessely0          | 17.8 ns                    | 11.2 ns                    |
 | bessely1          | 17.4 ns                    | 11.4 ns                    |
-| besselj(10, x)    | 82.0 ns                    | 80.5                       | 
-| bessely(10, x)    | 62.48 ns                   | 38.8                       |
-| besselj(100, x)   | 159.6 ns                   | 183.8                      | 
-| bessely(100, x)   | 215.3 ns                   | 146.3                      | 
+| besselj(10, x)    | 82.0 ns                    | 80.5 ns                    | 
+| bessely(10, x)    | 62.48 ns                   | 38.8 ns                    |
+| besselj(100, x)   | 159.6 ns                   | 183.8 ns                   | 
+| bessely(100, x)   | 215.3 ns                   | 146.3 ns                   | 
 
 
 # CPU Information
