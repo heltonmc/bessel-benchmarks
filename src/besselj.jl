@@ -1,8 +1,9 @@
 using Bessels
-function bessel(f)
-    N = 50000000
+function bessel(f; N=50000000, Order=false)
     v = rand(N)*200
-    v = sort(v)
+    if Order
+        v = sort(v)
+    end
     a = 0.0
 
     tstart = time()
@@ -13,10 +14,11 @@ function bessel(f)
     t = (tend-tstart) / N * 1e9
     return t, a
 end
-function bessel(f, nu)
-    N = 50000000
+function bessel(f, nu; N=50000000, Order=false)
     v = rand(N)*200
-    v = sort(v)
+    if Order
+        v = sort(v)
+    end
     a = 0.0
 
     tstart = time()
@@ -27,6 +29,5 @@ function bessel(f, nu)
     t = (tend-tstart) / N * 1e9
     return t, a
 end
-bessel(besselj0)
-bessel(besselj, 0)
-
+[bessel(func) for func in [besselj0, besselj1, bessely0, bessely1]]
+[bessel(func; Order=true) for func in [besselj0, besselj1, bessely0, bessely1]]
