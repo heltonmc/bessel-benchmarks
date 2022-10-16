@@ -10,7 +10,7 @@ The benchmark measures the total time to sum an array of N random values where w
 
 # Unsorted array
 
-|               | Bessels.jl (v1.8.2) CPU #1 |      gfortran -O3 (CPU #1)  | Bessels.jl (v1.8.2) CPU #2 | gfortran -O3 (CPU #2) |
+|               | Bessels.jl (CPU #1) |      gfortran -O3 (CPU #1)  | Bessels.jl (CPU #2) | gfortran -O3 (CPU #2) |
 | ------------- | :---:                      |   :---:                     | :---:                      |   :---:               |
 | besselj0      | 26.0 ns                    |      50.5 ns                | 29.9 ns                    |  37.3 ns              |
 | besselj1      | 26.7 ns                    |      50.5 ns                | 29.9 ns                    |  37.2 ns              |
@@ -24,7 +24,7 @@ The benchmark measures the total time to sum an array of N random values where w
 
 # Sorted array
 
-|                   | Bessels.jl (v1.8.2) CPU #1 | Bessels.jl (v1.8.2) CPU #2 |
+|                   | Bessels.jl (CPU #1) | Bessels.jl (CPU #2) |
 | -------------     | :---:                      | :---:                      |
 | besselj0          | 16.4 ns                    | 12.2 ns                    |
 | besselj1          | 17.2 ns                    | 12.5 ns                    |
@@ -37,8 +37,8 @@ The benchmark measures the total time to sum an array of N random values where w
 
 
 # CPU Information
-|               | CPU                        | OS              |
-| ------------- | :---:                      | :---:                      |
-| CPU #1      | 12 × Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz                    | Linux (x86_64-linux-gnu)                   |
-| CPU #2      | macOS (arm64-apple-darwin21.3.0)                    | 8 x Apple M1                   |
+|               | CPU                                                   | OS                           | Julia     | Bessels.jl     | gfortran  | 
+| ------------- | :---:                                                 | :---:                        | :---:     | :---:          | :---:     |
+| CPU #1        | 12 × Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz         | Linux (x86_64-linux-gnu)     | v1.8.2    | v0.2.4         | GNU Fortran (Ubuntu 11.2.0-19ubuntu1) 11.2.0 |
+| CPU #2        | macOS (arm64-apple-darwin21.3.0)                      | 8 x Apple M1                 | v1.8.2    | v0.2.4         | GNU Fortran (Homebrew GCC 11.1.0_1) 11.1.0 |
 
