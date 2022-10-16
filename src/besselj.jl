@@ -31,3 +31,6 @@ function bessel(f, nu; N=50000000, Order=false)
 end
 [bessel(func) for func in [besselj0, besselj1, bessely0, bessely1]]
 [bessel(func; Order=true) for func in [besselj0, besselj1, bessely0, bessely1]]
+
+[bessel(func, 10) for func in [besselj, bessely]]
+[bessel(func, 10; Order=true) for func in [besselj, bessely]]
