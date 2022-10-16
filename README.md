@@ -4,18 +4,22 @@ This project pulls together benchmarks of different algorithms to compute Bessel
 
 This is very experimental right now. Please don't take this as any indication that something is "better". Especially because I do not yet report accuracy over the interval.
 
+So far, we are only comparing the implementation provided by [Bessels.jl](https://github.com/JuliaMath/Bessels.jl) and those provided by The [GNU Fortran Compiler](https://gcc.gnu.org/onlinedocs/gcc-4.9.4/gfortran/BESSEL_005fJN.html) (which only supports integer orders).
+
+The benchmark measures the total time to sum an array of N random values where we report the time per iteration (total time / N).
+
 # Unsorted array
 
 |               | Bessels.jl (v1.8.2) CPU #1 |      gfortran -O3 (CPU #1)  | Bessels.jl (v1.8.2) CPU #2 | gfortran -O3 (CPU #2) |
 | ------------- | :---:                      |   :---:                     | :---:                      |   :---:               |
-| besselj0      | 26.0 ns                    |      50.5                   | 29.9 ns                    |  37.3                 |
-| besselj1      | 26.7 ns                    |      50.5                   | 29.9 ns                    |   37.2                |
-| bessely0      | 28.1 ns                    |      50.7                   | 30.9 ns                    |        29.1           |
-| bessely1      | 27.6 ns                    |      50.6                   | 30.3 ns                    |       29.2            |
-| besselj(10, x) | 97.8 ns                   |      124.0                  | 103.6                      |       70.2            |
-| bessely(10, x) | 92.3 ns                   |      122.0                  | 54.0                       |       59.1            |
-| besselj(100, x) | 172.1 ns                  |      527.0                  | 220.1                      |       445.0           |
-| bessely(100, x) | 229.7 ns                  |      304.0                  | 158.2                      |       254.0           |
+| besselj0      | 26.0 ns                    |      50.5 ns                | 29.9 ns                    |  37.3 ns              |
+| besselj1      | 26.7 ns                    |      50.5 ns                | 29.9 ns                    |  37.2 ns              |
+| bessely0      | 28.1 ns                    |      50.7 ns                | 30.9 ns                    |  29.1 ns              |
+| bessely1      | 27.6 ns                    |      50.6 ns                | 30.3 ns                    |  29.2 ns              |
+| besselj(10, x) | 97.8 ns                   |      124.0 ns               | 103.6 ns                   |  70.2 ns              |
+| bessely(10, x) | 92.3 ns                   |      122.0 ns               | 54.0 ns                    |  59.1 ns              |
+| besselj(100, x) | 172.1 ns                 |      527.0 ns               | 220.1 ns                   |  445.0 ns             |
+| bessely(100, x) | 229.7 ns                 |      304.0 ns               | 158.2 ns                   |  54.0 ns              |
 
 
 # Sorted array
